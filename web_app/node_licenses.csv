@@ -1,0 +1,23 @@
+name,version,directory,repository,summary,from package.json,from license,from readme
+a2iot,0.0.0,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot,(none),Unknown,,,
+amqplib,0.5.3,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/amqplib,https://github.com/squaremo/amqp.node,MIT,MIT,MIT,
+body-parser,1.18.3,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/body-parser,https://github.com/expressjs/body-parser,MIT,MIT,MIT,
+cookie-parser,1.4.3,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/cookie-parser,https://github.com/expressjs/cookie-parser,MIT,MIT,MIT,
+cookie-session,2.0.0-beta.3,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/cookie-session,https://github.com/expressjs/cookie-session,MIT,MIT,MIT,
+csv-writer,1.2.0,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/csv-writer,https://github.com/ryu1kn/csv-writer,MIT,MIT,,
+debug,2.6.9,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/debug,http://github.com/visionmedia/debug,MIT,MIT,MIT,MIT
+express,4.16.4,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/express,https://github.com/expressjs/express,MIT,MIT,MIT,
+express-easy-zip,1.1.4,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/express-easy-zip,https://github.com/tanhauhau/express-easy-zip,MIT,MIT,MIT,MIT
+express-zip,2.0.1,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/express-zip,http://github.com/thrackle/express-zip,MIT,,MIT,MIT
+http-errors,1.6.3,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/http-errors,https://github.com/jshttp/http-errors,MIT,MIT,MIT,
+jade,1.11.0,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/jade,http://github.com/jadejs/jade,MIT,MIT,MIT,MIT
+moment,2.24.0,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/moment,https://github.com/moment/moment,MIT,MIT,,
+moment-range,4.0.1,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/moment-range,https://git@github.com/rotaready/moment-range,Unlicense,Unlicense,,
+morgan,1.9.1,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/morgan,https://github.com/expressjs/morgan,MIT,MIT,MIT,
+mysql,2.16.0,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/mysql,https://github.com/mysqljs/mysql,MIT,MIT,,MIT
+node-datetime,2.1.2,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/node-datetime,https://github.com/voltrue2/node-datetime,MIT,MIT,,
+passport,0.4.0,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/passport,http://github.com/jaredhanson/passport,MIT,MIT,MIT,MIT
+passport-local,1.0.0,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/passport-local,http://github.com/jaredhanson/passport-local,MIT,MIT,MIT,MIT
+promise,8.0.2,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/promise,https://github.com/then/promise,MIT,MIT,,MIT
+serve-static,1.13.2,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/serve-static,https://github.com/expressjs/serve-static,MIT,MIT,MIT,
+type-of-is,3.5.1,/home/a2iot1/swapnil_work/VueCLI/backend/workplace/a2iot/node_modules/type-of-is,https://github.com/stephenhandley/type-of-is,MIT,MIT,,

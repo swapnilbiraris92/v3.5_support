@@ -1,0 +1,65 @@
+#signout {
+	font-size:20px;
+}
+
+.langjpy {
+	font-family: Meiryo;
+}
+
+.langeng {
+	font-family: Lucida Sans unicode;
+}
+
+.chartdropdown {
+	float: right;
+}
+
+.border-3{
+border-style:solid;
+ border-width: 3px;
+ border-color: rgba(255, 0, 0, 1);
+}
+
+.btn-default {
+	background-color: rgba(0,0,0,0);
+}
+
+.btn-default:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.cardbody {
+	padding-left: 2%;
+}
+
+#performance {
+	margin-top: 0%;
+}
+
+#availability {
+	margin-top: 0%;
+}
+#quality {
+	margin-top: 0%;
+}
+#oee {
+	margin-top: 0%;
+}
+
+.customfooter {
+	background-color: rgba(0,0,0,0.1);
+	height: 50px;
+	padding: 1%;
+}
+
+.btn-duration {
+	background-color: #fff;
+	border-color: #000;
+}
+
+.btn-duration:hover {
+	background-color: rgba(0,0,0,0.1);
+}
+.dropdown-item:hover {
+	background-color: rgba(0,0,255,0.7);
+}

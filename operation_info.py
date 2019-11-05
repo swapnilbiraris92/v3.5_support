@@ -1,0 +1,332 @@
+from dateutil.relativedelta import relativedelta
+from datetime import datetime as dt
+import mysql.connector as mdb
+import config
+
+mysql_host = config.host
+mysql_user = config.user
+mysql_password = config.password
+raw_tables_database = config.database_sa
+mysql_database_sa = config.database_sa
+mysql_database_cs = config.database_cs
+
+raw_data_table = config.raw_data_table
+start_threshold = config.start_threshold
+end_threshold = config.end_threshold
+machine_list = ['4-01', '4-02', '4-03', '4-05', '4-06', '4-07', '4-09']
+
+
+def operation_info_fun(database_name):
+    """
+
+    :param database_name:
+    """
+    operation_time = 0
+    down_time = 0
+    device_not_connected = 0
+    machine_flag = 0
+    on_flag = 0
+    off_flag = 0
+    disconnected_threshold = 300
+    operation_info = []
+    device_disconnected_info = []
+    device_disconnected_flag = 0
+
+    current_time = dt.now().replace(microsecond=0)
+
+    if current_time.hour < 6:
+        current_time = current_time.replace(hour=6, minute=0, second=0, microsecond=0) - relativedelta(days=1)
+    else:
+        current_time = current_time.replace(hour=6, minute=0, second=0, microsecond=0)
+
+    conn = mdb.connect(host=mysql_host, user=mysql_user, password=mysql_password, auth_plugin='mysql_native_password',
+                       database=database_name)
+    cursor = conn.cursor()
+    for machine in machine_list:
+        machine_flag = 0
+        on_flag = 0
+        off_flag = 0
+        device_disconnected_flag = 0
+        query = "select * from operation_info where machine_id = '" + machine + "' order by end_time desc limit 1"
+        cursor.execute(query)
+        max_time = cursor.fetchall()
+        # print("main_ max_time", max_time)
+        if len(max_time) == 0:
+            query = "select machine_id, ts, prediction from " + raw_data_table + " where machine_id = '" + machine + \
+                    "' and ts < '" + str(current_time) + "' order by ts"
+            cursor.execute(query)
+            raw_data = cursor.fetchall()
+            if len(raw_data) > 0:
+                start_time = raw_data[0][1]
+                for instance in raw_data[1:]:
+                    if (instance[1] - start_time).total_seconds() < disconnected_threshold:
+                        if device_disconnected_flag == 1:
+                            device_disconnected_flag = 0
+                            device_disconnected_end_time = instance[1]
+                            device_disconnected_info.append(
+                                (machine, device_disconnected_start_time, device_disconnected_end_time))
+                        if (instance[2] == 0):
+                            off_flag += 1
+                            on_flag = 0
+                            if off_flag == end_threshold and machine_flag == 1:
+                                machine_flag = 0
+                                operation_end_time = instance[1]
+                                operation_info.append((machine, operation_start_time, operation_end_time))
+                        else:
+                            off_flag = 0
+                            on_flag += 1
+                            if on_flag == start_threshold and machine_flag == 0:
+                                machine_flag = 1
+                                operation_start_time = instance[1]
+                    else:
+                        device_disconnected_flag = 1
+                        device_disconnected_start_time = start_time
+                    start_time = instance[1]
+        else:
+            max_time_flag = max_time[0][2]
+            if not max_time_flag:
+                max_time = max_time[0][1] - relativedelta(seconds=1)
+            if max_time_flag:
+                max_time = max_time[0][2]
+            partition_list = ''
+
+            partition_start_day = max_time.timetuple().tm_yday
+            if partition_start_day == 366:
+                partition_start_day = 0
+
+            partition_end_day = dt.now().timetuple().tm_yday
+            if partition_end_day == 366:
+                partition_end_day = 0
+
+            partition_day_list = []
+            if max_time.year == dt.now().year and partition_start_day == partition_end_day:
+                partition_day_list.append(partition_start_day)
+            elif partition_start_day < partition_end_day:
+                for partition_day in range(partition_start_day, partition_end_day + 1):
+                    partition_day_list.append(partition_day)
+            else:
+                for partition_day in range(partition_start_day, 366):
+                    partition_day_list.append(partition_day)
+                for partition_day in range(0, partition_end_day + 1):
+                    partition_day_list.append(partition_day)
+
+            for partition_day in partition_day_list:
+                partition_list = partition_list + machine.replace('-', '_') + "sp" + str(partition_day) + ", "
+
+            partition_list = partition_list[0: len(partition_list) - 2]
+
+            query = "delete from operation_info where machine_id = '" + machine + "' and start_time > '" + str(
+                max_time) + "'"
+            cursor.execute(query)
+            cursor.execute("commit")
+            query = "delete from device_disconnected_info where machine_id = '" + machine + "' and start_time > '" + str(
+                max_time) + "'"
+            cursor.execute(query)
+            cursor.execute("commit")
+
+            query = "select machine_id, ts, prediction from " + raw_data_table + " partition( " + partition_list + \
+                    ") where ts > '" + str(max_time) + "' and ts < '" + str(current_time) + "' order by ts"
+            cursor.execute(query)
+            raw_data = cursor.fetchall()
+            if len(raw_data) > 0:
+                start_time = raw_data[0][1]
+                for instance in raw_data[1:]:
+                    if (instance[1] - start_time).total_seconds() < disconnected_threshold:
+                        if device_disconnected_flag == 1:
+                            device_disconnected_flag = 0
+                            device_disconnected_end_time = instance[1]
+                            device_disconnected_info.append(
+                                (machine, device_disconnected_start_time, device_disconnected_end_time))
+                        if (instance[2] == 0):
+                            off_flag += 1
+                            on_flag = 0
+                            if off_flag == end_threshold and machine_flag == 1:
+                                machine_flag = 0
+                                operation_end_time = instance[1]
+                                operation_info.append((machine, operation_start_time, operation_end_time))
+                        else:
+                            off_flag = 0
+                            on_flag += 1
+                            if on_flag == start_threshold and machine_flag == 0:
+                                machine_flag = 1
+                                operation_start_time = instance[1]
+                    else:
+                        device_disconnected_flag = 1
+                        device_disconnected_start_time = start_time
+                    start_time = instance[1]
+        if machine_flag == 1:
+            operation_info.append((machine, operation_start_time, None))
+        if device_disconnected_flag == 1:
+            device_disconnected_info.append((machine, device_disconnected_start_time, None))
+    if len(operation_info) > 0:
+        query = "insert into operation_info(machine_id, start_time, end_time) values(%s, %s, %s)"
+        cursor.executemany(query, operation_info)
+        cursor.execute("commit")
+    if len(device_disconnected_info) > 0:
+        query = "insert into device_disconnected_info(machine_id, start_time, end_time) values(%s, %s, %s)"
+        cursor.executemany(query, device_disconnected_info)
+        cursor.execute("commit")
+
+    cursor.close()
+    conn.close()
+
+
+def operation_info_fun_cs(database_name):
+    """
+
+    :param database_name:
+    """
+    operation_time = 0
+    down_time = 0
+    device_not_connected = 0
+    machine_flag = 0
+    on_flag = 0
+    off_flag = 0
+    disconnected_threshold = 300
+    operation_info = []
+    device_disconnected_info = []
+    device_disconnected_flag = 0
+
+    current_time = dt.now().replace(microsecond=0)
+
+    if current_time.hour < 6:
+        current_time = current_time.replace(hour=6, minute=0, second=0, microsecond=0) - relativedelta(days=1)
+    else:
+        current_time = current_time.replace(hour=6, minute=0, second=0, microsecond=0)
+
+    conn = mdb.connect(host=mysql_host, user=mysql_user, password=mysql_password, auth_plugin='mysql_native_password',
+                       database=database_name)
+    cursor = conn.cursor()
+    for machine in machine_list:
+        machine_flag = 0
+        on_flag = 0
+        off_flag = 0
+        device_disconnected_flag = 0
+        query = "select * from operation_info where machine_id = '" + machine + "' order by end_time desc limit 1"
+        cursor.execute(query)
+        max_time = cursor.fetchall()
+        if len(max_time) == 0:
+            query = "select machine_id, ts, prediction from " + raw_data_table + " where machine_id = '" + machine + \
+                    "' and ts < '" + str(current_time) + "' order by ts"
+            cursor.execute(query)
+            raw_data = cursor.fetchall()
+            print(query)
+            if len(raw_data) > 0:
+                start_time = raw_data[0][1]
+                for instance in raw_data[1:]:
+                    if (instance[1] - start_time).total_seconds() < disconnected_threshold:
+                        if device_disconnected_flag == 1:
+                            device_disconnected_flag = 0
+                            device_disconnected_end_time = instance[1]
+                            device_disconnected_info.append(
+                                (machine, device_disconnected_start_time, device_disconnected_end_time))
+                        if (instance[2] == 0):
+                            off_flag += 1
+                            on_flag = 0
+                            if off_flag == end_threshold and machine_flag == 1:
+                                machine_flag = 0
+                                operation_end_time = instance[1]
+                                operation_info.append((machine, operation_start_time, operation_end_time))
+                        else:
+                            off_flag = 0
+                            on_flag += 1
+                            if on_flag == start_threshold and machine_flag == 0:
+                                machine_flag = 1
+                                operation_start_time = instance[1]
+                    else:
+                        device_disconnected_flag = 1
+                        device_disconnected_start_time = start_time
+                    start_time = instance[1]
+        else:
+            max_time_flag = max_time[0][2]
+            if not max_time_flag:
+                max_time = max_time[0][1] - relativedelta(seconds=1)
+            if max_time_flag:
+                max_time = max_time[0][2]
+
+            partition_list = ''
+
+            partition_start_day = max_time.timetuple().tm_yday
+            if partition_start_day == 366:
+                partition_start_day = 0
+
+            partition_end_day = dt.now().timetuple().tm_yday
+            if partition_end_day == 366:
+                partition_end_day = 0
+
+            partition_day_list = []
+            if max_time.year == dt.now().year and partition_start_day == partition_end_day:
+                partition_day_list.append(partition_start_day)
+            elif partition_start_day < partition_end_day:
+                for partition_day in range(partition_start_day, partition_end_day + 1):
+                    partition_day_list.append(partition_day)
+            else:
+                for partition_day in range(partition_start_day, 366):
+                    partition_day_list.append(partition_day)
+                for partition_day in range(0, partition_end_day + 1):
+                    partition_day_list.append(partition_day)
+
+            for partition_day in partition_day_list:
+                partition_list = partition_list + machine.replace('-', '_') + "sp" + str(partition_day) + ", "
+
+            partition_list = partition_list[0: len(partition_list) - 2]
+
+            query = "delete from operation_info where machine_id = '" + machine + "' and start_time > '" + str(
+                max_time) + "'"
+            cursor.execute(query)
+            cursor.execute("commit")
+            query = "delete from device_disconnected_info where machine_id = '" + machine + "' and start_time > '" + str(
+                max_time) + "'"
+            cursor.execute(query)
+            cursor.execute("commit")
+
+            query = "select machine_id, ts, prediction from " + raw_data_table + " partition( " + partition_list + \
+                    ") where ts > '" + str(max_time) + "' and ts < '" + str(current_time) + "' order by ts"
+            cursor.execute(query)
+            raw_data = cursor.fetchall()
+            if len(raw_data) > 0:
+                start_time = raw_data[0][1]
+                for instance in raw_data[1:]:
+                    if (instance[1] - start_time).total_seconds() < disconnected_threshold:
+                        if device_disconnected_flag == 1:
+                            device_disconnected_flag = 0
+                            device_disconnected_end_time = instance[1]
+                            device_disconnected_info.append(
+                                (machine, device_disconnected_start_time, device_disconnected_end_time))
+                        if (instance[2] == 0):
+                            off_flag += 1
+                            on_flag = 0
+                            if off_flag == end_threshold and machine_flag == 1:
+                                machine_flag = 0
+                                operation_end_time = instance[1]
+                                operation_info.append((machine, operation_start_time, operation_end_time))
+                        else:
+                            off_flag = 0
+                            on_flag += 1
+                            if on_flag == start_threshold and machine_flag == 0:
+                                machine_flag = 1
+                                operation_start_time = instance[1]
+                    else:
+                        device_disconnected_flag = 1
+                        device_disconnected_start_time = start_time
+                    start_time = instance[1]
+        if machine_flag == 1:
+            operation_info.append((machine, operation_start_time, None))
+        if device_disconnected_flag == 1:
+            device_disconnected_info.append((machine, device_disconnected_start_time, None))
+    if len(operation_info) > 0:
+        query = "insert into operation_info(machine_id, start_time, end_time) values(%s, %s, %s)"
+        cursor.executemany(query, operation_info)
+        cursor.execute("commit")
+    if len(device_disconnected_info) > 0:
+        query = "insert into device_disconnected_info(machine_id, start_time, end_time) values(%s, %s, %s)"
+        cursor.executemany(query, device_disconnected_info)
+        cursor.execute("commit")
+
+    cursor.close()
+    conn.close()
+
+
+if __name__ == "__main__":
+    operation_info_fun(mysql_database_sa)
+    operation_info_fun_cs(mysql_database_cs)

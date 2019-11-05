@@ -1,0 +1,364 @@
+body{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+  color: #ff000d;
+  text-align: center; }
+
+.occupancy-rate-progress-circle {
+  position: relative;
+  display: inline-block;
+  margin: 0rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ff000d; }
+
+.occupancy-rate-progress-circle:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-animation: colorload 2s;
+  animation: colorload 2s; }
+
+.occupancy-rate-progress-circle span {
+  font-size: 2rem;
+  color: #ff000d;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 90px;
+  height: 90px;
+  line-height: 60px;
+  margin-left: -45px;
+  margin-top: -45px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1; 
+  padding-top: 10%;
+}
+
+.occupancy-rate-progress-circle span:after {
+  content: "%";
+  font-weight: 900;
+  color: #ff000d; }
+
+
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-0:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(90deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-1:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(93.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-2:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(97.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-3:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(100.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-4:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(104.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-5:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(108deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-6:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(111.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-7:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(115.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-8:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(118.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-9:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(122.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-10:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(126deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-11:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(129.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-12:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(133.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-13:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(136.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-14:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(140.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-15:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(129.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-16:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(133.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-17:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(136.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-18:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(140.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-19:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(144deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-20:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(151.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-21:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(158.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-22:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(161.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-23:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(165.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-24:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(169.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-25:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(180deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-26:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(183.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-27:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(187.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-28:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(190.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-29:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(194.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-30:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(198deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-31:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(201.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-32:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(205.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-33:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(208.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-34:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(212.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-35:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(216deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-40:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(234deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-36:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(219.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-37:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(223.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-38:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(226.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-39:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(230.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-41:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(237.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-42:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(241.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-43:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(244.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-44:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(248.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-45:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(252deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-46:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(255.6deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-47:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(259.2deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-48:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(262.8deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-49:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(266.4deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-50:after {
+  background-image: linear-gradient(-90deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-51:after {
+  background-image: linear-gradient(-86.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-52:after {
+  background-image: linear-gradient(-82.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-53:after {
+  background-image: linear-gradient(-79.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-54:after {
+  background-image: linear-gradient(-75.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-55:after {
+  background-image: linear-gradient(-72deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-56:after {
+  background-image: linear-gradient(-68.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-57:after {
+  background-image: linear-gradient(-64.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-58:after {
+  background-image: linear-gradient(-61.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-59:after {
+  background-image: linear-gradient(-57.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-60:after {
+  background-image: linear-gradient(-54deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-61:after {
+  background-image: linear-gradient(-50.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-62:after {
+  background-image: linear-gradient(-46.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-63:after {
+  background-image: linear-gradient(-43.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-64:after {
+  background-image: linear-gradient(-39.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-65:after {
+  background-image: linear-gradient(-36deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-66:after {
+  background-image: linear-gradient(-32.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-67:after {
+  background-image: linear-gradient(-28.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-68:after {
+  background-image: linear-gradient(-25.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-69:after {
+  background-image: linear-gradient(-21.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-70:after {
+  background-image: linear-gradient(-18deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-71:after {
+  background-image: linear-gradient(-14.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-72:after {
+  background-image: linear-gradient(-10.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-73:after {
+  background-image: linear-gradient(-7.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-74:after {
+  background-image: linear-gradient(-3.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-75:after {
+  background-image: linear-gradient(0deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-76:after {
+  background-image: linear-gradient(3.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-77:after {
+  background-image: linear-gradient(7.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-78:after {
+  background-image: linear-gradient(10.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-79:after {
+  background-image: linear-gradient(14.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-80:after {
+  background-image: linear-gradient(18deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-81:after {
+  background-image: linear-gradient(21.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-82:after {
+  background-image: linear-gradient(25.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-83:after {
+  background-image: linear-gradient(28.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-84:after {
+  background-image: linear-gradient(32.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-85:after {
+  background-image: linear-gradient(36deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-86:after {
+  background-image: linear-gradient(39.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-87:after {
+  background-image: linear-gradient(43.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-88:after {
+  background-image: linear-gradient(46.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-89:after {
+  background-image: linear-gradient(50.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-90:after {
+  background-image: linear-gradient(54deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-91:after {
+  background-image: linear-gradient(57.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-92:after {
+  background-image: linear-gradient(61.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-93:after {
+  background-image: linear-gradient(64.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-94:after {
+  background-image: linear-gradient(68.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-95:after {
+  background-image: linear-gradient(72deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-96:after {
+  background-image: linear-gradient(75.6deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-97:after {
+  background-image: linear-gradient(79.2deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-98:after {
+  background-image: linear-gradient(82.8deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-99:after {
+  background-image: linear-gradient(86.4deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+.occupancy-rate-progress-circle.occupancy-rate-progress-100:after {
+  background-image: linear-gradient(90deg, #ff000d 50%, transparent 50%, transparent), linear-gradient(270deg, #ff000d 50%, #ebebeb 50%, #ebebeb); }
+
+@-webkit-keyframes colorload {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg); }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=occupancy-rate-progress-circle.css.map */

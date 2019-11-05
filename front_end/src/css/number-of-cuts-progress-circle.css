@@ -1,0 +1,364 @@
+body{
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+  color: #008744;
+  text-align: center; }
+
+.number-of-cuts-progress-circle {
+  position: relative;
+  display: inline-block;
+  margin: 0rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #008744; }
+
+.number-of-cuts-progress-circle:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-animation: colorload 2s;
+  animation: colorload 2s; }
+
+.number-of-cuts-progress-circle span {
+  font-size: 2rem;
+  color: #008744;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 90px;
+  height: 90px;
+  line-height: 60px;
+  margin-left: -45px;
+  margin-top: -45px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1; 
+  padding-top: 10%;
+}
+
+.number-of-cuts-progress-circle span:after {
+  content: "%";
+  font-weight: 900;
+  color: #008744; }
+
+
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-0:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(90deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-1:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(93.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-2:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(97.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-3:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(100.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-4:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(104.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-5:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(108deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-6:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(111.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-7:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(115.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-8:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(118.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-9:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(122.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-10:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(126deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-11:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(129.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-12:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(133.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-13:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(136.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-14:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(140.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-15:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(129.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-16:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(133.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-17:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(136.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-18:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(140.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-19:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(144deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-20:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(151.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-21:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(158.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-22:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(161.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-23:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(165.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-24:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(169.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-25:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(180deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-26:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(183.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-27:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(187.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-28:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(190.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-29:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(194.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-30:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(198deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-31:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(201.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-32:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(205.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-33:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(208.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-34:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(212.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-35:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(216deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-40:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(234deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-36:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(219.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-37:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(223.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-38:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(226.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-39:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(230.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-41:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(237.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-42:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(241.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-43:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(244.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-44:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(248.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-45:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(252deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-46:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(255.6deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-47:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(259.2deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-48:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(262.8deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-49:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(266.4deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-50:after {
+  background-image: linear-gradient(-90deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-51:after {
+  background-image: linear-gradient(-86.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-52:after {
+  background-image: linear-gradient(-82.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-53:after {
+  background-image: linear-gradient(-79.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-54:after {
+  background-image: linear-gradient(-75.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-55:after {
+  background-image: linear-gradient(-72deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-56:after {
+  background-image: linear-gradient(-68.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-57:after {
+  background-image: linear-gradient(-64.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-58:after {
+  background-image: linear-gradient(-61.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-59:after {
+  background-image: linear-gradient(-57.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-60:after {
+  background-image: linear-gradient(-54deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-61:after {
+  background-image: linear-gradient(-50.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-62:after {
+  background-image: linear-gradient(-46.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-63:after {
+  background-image: linear-gradient(-43.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-64:after {
+  background-image: linear-gradient(-39.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-65:after {
+  background-image: linear-gradient(-36deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-66:after {
+  background-image: linear-gradient(-32.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-67:after {
+  background-image: linear-gradient(-28.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-68:after {
+  background-image: linear-gradient(-25.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-69:after {
+  background-image: linear-gradient(-21.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-70:after {
+  background-image: linear-gradient(-18deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-71:after {
+  background-image: linear-gradient(-14.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-72:after {
+  background-image: linear-gradient(-10.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-73:after {
+  background-image: linear-gradient(-7.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-74:after {
+  background-image: linear-gradient(-3.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-75:after {
+  background-image: linear-gradient(0deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-76:after {
+  background-image: linear-gradient(3.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-77:after {
+  background-image: linear-gradient(7.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-78:after {
+  background-image: linear-gradient(10.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-79:after {
+  background-image: linear-gradient(14.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-80:after {
+  background-image: linear-gradient(18deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-81:after {
+  background-image: linear-gradient(21.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-82:after {
+  background-image: linear-gradient(25.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-83:after {
+  background-image: linear-gradient(28.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-84:after {
+  background-image: linear-gradient(32.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-85:after {
+  background-image: linear-gradient(36deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-86:after {
+  background-image: linear-gradient(39.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-87:after {
+  background-image: linear-gradient(43.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-88:after {
+  background-image: linear-gradient(46.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-89:after {
+  background-image: linear-gradient(50.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-90:after {
+  background-image: linear-gradient(54deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-91:after {
+  background-image: linear-gradient(57.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-92:after {
+  background-image: linear-gradient(61.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-93:after {
+  background-image: linear-gradient(64.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-94:after {
+  background-image: linear-gradient(68.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-95:after {
+  background-image: linear-gradient(72deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-96:after {
+  background-image: linear-gradient(75.6deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-97:after {
+  background-image: linear-gradient(79.2deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-98:after {
+  background-image: linear-gradient(82.8deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-99:after {
+  background-image: linear-gradient(86.4deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+.number-of-cuts-progress-circle.number-of-cuts-progress-100:after {
+  background-image: linear-gradient(90deg, #008744 50%, transparent 50%, transparent), linear-gradient(270deg, #008744 50%, #ebebeb 50%, #ebebeb); }
+
+@-webkit-keyframes colorload {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg); }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=number-of-cuts-progress-circle.css.map */

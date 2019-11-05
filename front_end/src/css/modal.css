@@ -1,0 +1,12 @@
+.col-xl-1modal {
+	max-width: 0%;
+}
+.col-xl-2modal {
+	flex: 0 0 13%;
+}
+.col-xl-4modal {
+	flex: 0 0 26.333333%;
+}
+.modal-sm, .modal-xl {
+    max-width: 600px;
+}
