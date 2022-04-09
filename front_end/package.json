@@ -24,7 +24,7 @@
     "element-ui": "^2.5.4",
     "jquery": "^3.3.1",
     "js-file-download": "^0.4.4",
-    "moment": "^2.23.0",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.23",
     "numeral": "^2.0.6",
     "uiv": "^0.30.0",
